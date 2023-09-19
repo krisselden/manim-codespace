@@ -1,0 +1,18 @@
+{
+    "name": "Manim Python 3",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"image": "mcr.microsoft.com/devcontainers/python:0-3.11",
+    "features": {
+        "ghcr.io/wxw-matt/devcontainer-features/apt:latest": {
+			"packages": "build-essential python3-dev libcairo2-dev libpango1.0-dev ffmpeg texlive texlive-latex-extra dvisvgm"
+        }
+    },
+	"postCreateCommand": "pip3 install manim",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"Rickaym.manim-sideview"
+			]
+		}
+	}
+}
